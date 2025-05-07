@@ -39,7 +39,7 @@ services:
     environment:
       # https://docs.phpmyadmin.net/en/latest/setup.html#docker-environment-variables
       PMA_HOST: db
-      PMA_PORT: 3306
+      PMA_PORT: 1306
       MYSQL_ROOT_PASSWORD: "${DB_ROOT_PASSWORD}"
       UPLOAD_LIMIT: 50M
     ports:
@@ -54,7 +54,7 @@ services:
     image: mysql:latest # https://hub.docker.com/_/mysql/ - or mariadb https://hub.docker.com/_/mariadb
     # platform: linux/x86_64  # Uncomment if your machine is running on arm (ex: Apple Silicon processor)
     ports:
-      - ${IP}:3306:3306 # change ip if required
+      - ${IP}:1306:1306 # change ip if required
     command: [
         '--character-set-server=utf8mb4',
         '--collation-server=utf8mb4_unicode_ci'
